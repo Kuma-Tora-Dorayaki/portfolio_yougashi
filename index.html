@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yougashi</title>
+    <meta name="description" content="ポートフォリオ用のサンプルサイト（洋菓子店）です。This site is a sample site of 'pastry shop' for a portfolio.">
+    <link rel="icon" href="images/devicon_cakephp.png">
+  
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Caslon+Display&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="css/style.mini.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="wrap">
+        <a href="#"><h3 class="shop-name menu-open">yougashi</h3></a>
+        
+        <nav class="nav-list">
+          <a class="nav-list-item menu-close" href="#menu">MENU</a>
+          <a class="nav-list-item menu-close" href="#about">ABOUT</a>
+          <a class="nav-list-item menu-close" href="#access">ACCESS</a>
+          <a class="nav-list-item menu-close" href="#contact">CONTACT</a>
+        </nav>
+
+        <div id="ham-menu" class="menu-open">
+          <span class="ham-line ham-line-upper"></span>
+          <span class="ham-line ham-line-center"></span>
+          <span class="ham-line ham-line-bottom"></span>
+        </div>
+
+      </div>
+    </header>
+
+    <main>
+      <div id="main-visual"></div>
+
+      <section id="menu">
+        <h2 class="section-title">MENU</h2>
+        
+        <div class="menu-item-container">
+          <article class="menu-item big-box menu-recommendation">
+            <p class="menu-topic">Recommendation</p>
+            <div class="menu-img"><img id="menu-img-1" src="images/isabela-kronemberger-nPD8DvR2jPM-unsplash.jpg" alt="Recommendation-menu"></div>
+            <div class="menu-text-box">
+              <div class="commodity-box">
+                <p class="commodity-name menu-text">おすすめ商品</p>
+                <p class="commodity-price menu-text">￥850&nbsp;(込)</p>
+              </div>
+              <p class="commodity-text menu-text">テキストテキスト
+                テキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキスト</p>
+            </div>
+          </article>
+
+          <article class="menu-item menu-seasonal">
+            <p class="menu-topic">Seasonal</p>
+            <div class="menu-img"><img id="menu-img-2" src="images/toa-heftiba-ZuCIYt_Hp-g-unsplash.jpg" alt="Seasonal-menu"></div>
+            <div class="menu-text-box">
+              <div class="commodity-box">
+                <p class="commodity-name menu-text">いちじくのタルト</p>
+                <p class="commodity-price menu-text">￥650&nbsp;(込)</p>
+              </div>
+              <p class="commodity-text menu-text">テキストテキスト
+                テキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキスト</p>
+            </div>
+          </article>
+
+          <article class="menu-item last-box menu-seasonal">
+            <p class="menu-topic">Seasonal</p>
+            <div class="menu-img"><img id="menu-img-3" src="images/Slice 1.png" alt="Seasonal-menu"></div>
+            <div class="menu-text-box">
+              <div class="commodity-box">
+                <p class="commodity-name menu-text">季節商品</p>
+                <p class="commodity-price menu-text">￥600&nbsp;(込)</p>
+              </div>
+              <p class="commodity-text menu-text">テキストテキスト
+                テキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキスト</p>
+            </div>
+          </article>
+
+          <article class="menu-item menu-standard">
+            <p class="menu-topic">Standard</p>
+            <div class="menu-img"><img id="menu-img-4" src="images/gaby-dyson-QX814A1w3j4-unsplash.jpg" alt="Standard-menu"></div>
+            <div class="menu-text-box">
+              <div class="commodity-box">
+                <p class="commodity-name menu-text">定番商品</p>
+                <p class="commodity-price menu-text">￥550&nbsp;(込)</p>
+              </div>
+              <p class="commodity-text menu-text">テキストテキスト
+                テキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキスト</p>
+            </div>
+          </article>
+
+          <article class="menu-item menu-standard">
+            <p class="menu-topic">Standard</p>
+            <div class="menu-img"><img id="menu-img-5" src="images/toa-heftiba-U_zIfKfEoRM-unsplash.jpg" alt="Standard-menu"></div>
+            <div class="menu-text-box">
+              <div class="commodity-box">
+                <p class="commodity-name menu-text">定番商品</p>
+                <p class="commodity-price menu-text">￥550&nbsp;(込)</p>
+              </div>
+              <p class="commodity-text menu-text">テキストテキスト
+                テキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキスト</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="and-more">and<br>
+           more<br>
+           in<br>
+           our&nbsp;shop
+        </p>
+      </section>
+
+      <section id="about">
+        <h2 class="section-title">ABOUT</h2>
+
+        <div class="about-item-container">
+          <article class="about-item about-item-left">
+            <div class="about-img about-img-left"><img id="about-img-1" src="images/dominic-kurniawan-suryaputra--D4l5GuNky4-unsplash.jpg" alt="shop-image"></div>
+            <p class="about-text">店の説明文。テキストテキスト
+              テキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキスト
+              テキスト
+            </p>
+          </article>
+
+          <article class="about-item about-item-right">
+            <div class="about-img about-img-right"><img id="about-img-2" src="images/redcharlie-t-7KEq9M0b0-unsplash.jpg" alt="owner-image"></div>
+            <p class="about-text">オーナーの説明文。テキストテキスト
+              テキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキスト
+              テキスト
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="access">
+        <h2 class="section-title">ACCESS</h2>
+
+        <div class="access-container">
+          <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.4192204696956!2d141.54452879678956!3d42.9905064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f74d32a13d184eb%3A0x45116373da143c3d!2z44Ko44K544Kz44Oz44OV44Kj44O844Or44OJSE9LS0FJRE8!5e0!3m2!1sja!2sjp!4v1734069558455!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+          <article class="access-article">
+            <p class="access-text">〒000-0000</p>
+            <p class="access-text">**県●●市○○町●●000-000</p>
+            <p class="access-text a-t-uline">&nbsp;電車でお越しの場合&nbsp;</p>
+            <p class="access-text">●●駅から徒歩５分</p>
+            <p class="access-text a-t-uline">&nbsp;バスでお越しの場合&nbsp;</p>
+            <p class="access-text">バス停”●●”から徒歩１０分</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title">CONTACT</h2>
+
+        <artile class="contact-article">
+          <p class="contact-text">mail  | ---------------.com</p>
+          <p class="contact-text">TEL | 0000-11-2222</p>
+          <p class="contact-text">営業時間 | 9:00～18:30</p>
+          <p class="contact-text holiday">定休日 | 毎火曜日</p>
+          <p class="contact-text holiday">第１、第３水曜日</p>
+          <p class="contact-text holiday">※上記が祝日の場合は営業し、<br>
+                                  別日に臨時休業いたします。</p>
+        </artile>
+      
+        <a href="#" class="recruit-btn">スタッフ募集のお知らせ</a>
+      </section>
+    </main>
+
+    <footer>  
+      <h4 class="shop-name">yougashi</h4>
+      <div class="sns-icons">
+        <a href="https://www.instagram.com/"><img src="images/🦆 icon _circle instagram_.png" alt=""></a>
+        <a href="https://x.com/"><img src="images/🦆 icon _twitterbird_.png" alt=""></a>
+        <a href="https://www.facebook.com/"><img src="images/🦆 icon _circle facebook_.png" alt=""></a>
+      </div>
+
+      <p class="copy">&copy;yougashi.co</p>
+    </footer>
+
+    <script src="javascript/script.min.js"></script>
+  </body>
+</html>
