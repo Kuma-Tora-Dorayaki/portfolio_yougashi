@@ -1,0 +1,683 @@
+@charset "UTF-8";
+@use "mq" as *;
+
+$cText : #1E1C1C;
+$cBackGr : #FFF5EA;
+$cBackGr-2 : #c97a2a;
+$cTextGr : #808080;
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+// header
+header {
+  background-color: $cBackGr-2;
+  height: 40px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+
+  .wrap {
+    margin: 0 20px;
+    position: relative;
+    z-index: 10;
+
+    @include mq(lg) {
+      margin:  0 50px;
+    }
+
+    .shop-name {
+      color: $cText;
+      font-family: "Cormorant Garamond", "Libre Caslon Display", "Playfair Display","EB Garamond", garamond, times, serif;
+      font-size: 24px;
+      letter-spacing: 3.76px;
+      font-weight: 400;
+      line-height: 20px;
+      position: absolute;
+      top: 10px;
+      transition-duration: 300ms;
+
+      &:hover {
+        cursor: pointer;
+        color: white;
+        transform: scale(1.1);
+      }
+    }
+    
+    .nav-list {
+      opacity: 0;
+      visibility: hidden;
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      position: absolute;
+      top: 120px;
+
+      @include mq(lg) {
+        opacity: 1;
+        visibility: visible;
+        flex-direction: row;
+        gap: 20px;
+        top: 12px;
+        right: 0;
+      }
+
+      &-item {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: $cTextGr;
+        text-decoration: none;
+        transition-duration: 300ms;
+
+        &:hover {
+          @include mq(lg) {
+            cursor: pointer;
+            color: #1E1C1C;
+            transform: scale(1.1);
+          }
+        }
+
+        @include mq(lg) {
+          color: white;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+    }
+    
+    #ham-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 18px;
+      position: absolute;
+      top: 12px;
+      right: 0;
+
+      @include mq(lg) {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    
+    .ham-line {
+      width: 100%;
+      height: 1px;
+      background-color: $cText;
+
+      &-upper {
+        rotate: 0;
+        transform-origin: center;
+        translate: 0 0;
+      }
+      
+      &-bottom {
+        rotate: 0;
+        transform-origin: center;
+        translate: 0 0;
+      }
+
+      &-cnter {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+
+  .section-title ,.menu-topic {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: $cTextGr;
+  }
+
+  #main-visual {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/mylene-larnaud-SI2J3XqmAyo-unsplash.jpg);
+    background-size: cover;
+
+    @include mq(lg) {
+      background-position: center
+    }
+  }
+
+  .section-title {
+    font-weight: 400;
+    font-size: 24px;
+    color: $cTextGr;
+    letter-spacing: 3px;
+    text-align: center;
+
+    @include mq(lg) {
+      font-size: 64px;
+    }
+  }
+  
+  #menu {
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    .menu-item-container {
+      @include mq(lg) {
+          width: 80vw;
+          max-width: 1000px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: auto auto;
+          gap: 40px;
+      }
+
+      .menu-item {
+        width: 80vw;
+        max-width: 400px;
+        margin: 50px auto 0 ;
+        
+        @include mq(lg) {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+
+        }
+
+        .menu-img {
+          @include mq(lg) {
+            height: auto;
+            aspect-ratio: 1 / 1;
+          }
+        }
+      }
+
+      .big-box {
+        @include mq(lg) {
+          grid-row: 1 / 2;
+          grid-column: 1 / 3;
+          width: 100%;
+        }
+
+        .menu-img {
+          @include mq(lg) {
+            height: auto;
+            aspect-ratio: 5 / 3;
+          }
+        }
+      }
+
+      .last-box {
+        @include mq(lg) {
+          order: 5;
+        }
+      }
+
+      .menu-topic {
+        font-size: 16px;
+        letter-spacing: 3px;
+        line-height: 25px;
+      }
+      
+      .menu-recommendation {
+        .menu-topic {
+          color: $cBackGr-2;
+        }
+      }
+
+      .menu-seasonal {
+        .menu-topic {
+          color: $cText;
+        }
+      }
+
+      .menu-img {
+        width: 100%;
+        height: 210px;
+        margin-bottom: 6px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 6px;
+        }
+      }
+
+      #menu-img-3 {
+        object-position: top;
+      }
+      
+      .menu-text-box {
+        margin: 0 5px;
+
+        .menu-text {
+          font-family: "Noto Sans JP", serif;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0.3px;
+          line-height: 26px;
+          color: $cText;
+        }
+        .commodity-box {
+          display: flex;
+          flex-direction: column;
+
+          .commodity-name {
+            font-size: 18px;
+            margin-left: 20px;
+            margin-top: 5px;
+            letter-spacing: 1.4px;
+          }
+  
+          .commodity-price {
+            border-bottom: 1px solid $cText;
+            text-align: end;
+            padding-right: 20px;
+            letter-spacing: 2px;
+          }
+        }
+
+        .commodity-text {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .and-more {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 2.6px;
+      line-height: 32px;
+      margin-top: 160px;
+      text-align: center;
+    }
+  }
+
+  #about {
+    width: 100%;
+    padding-bottom: 100px;
+    padding-top: 50px;
+    background-color: $cBackGr;
+
+    @include mq(lg) {
+      padding: 50px 25% 100px;
+    }
+
+    .about-item-container {
+      @include mq(lg) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+    } 
+
+    .about-item {
+      width: 100vw;
+      height: 410px;
+      margin-top: 30px;
+
+      .about-img {
+        img {
+          width: 100%;
+          height: 210px;
+          object-fit: cover;
+
+          @include mq(lg) {
+          border-radius: 10px;
+          }
+        }
+
+        
+        &-left {
+          @include mq(lg) {
+            height: 55vh;
+          }
+        }
+
+        &-right {
+          @include mq(lg) {
+            height: 40vh;
+            margin-top: 10px;
+          }
+        }
+
+      }
+
+      #about-img-1 {
+        object-position: 0 -150px;
+
+          @include mq(md) {
+          object-position: 0 -400px;
+          }
+
+          @include mq(lg) {
+          object-position: center;
+          height: 100%;
+          }
+
+      }
+
+      #about-img-2 {
+        object-position: 0 -70px;
+
+        @include mq(sm) {
+        object-position: 0 -100px;
+        }
+
+        @include mq(md) {
+        object-position: 0 -200px;
+        }
+
+        @include mq(lg) {
+        object-position: 0 center;
+        height: 100%;
+        }
+      }
+
+      .about-text {
+        font-family: "Noto Sans JP", serif;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+        line-height: 26px;
+        color: $cText;
+        width: 80vw;
+        max-width: 500px;
+        margin: 10px auto 0;
+        padding: 0 10px 0;
+
+        @include mq(lg) {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .about-item-left {
+      @include mq(lg) {
+        width: 55%;
+        height: auto;
+      }
+    }
+
+    .about-item-right {
+      @include mq(lg) {
+        width: 35%;
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+  
+  #access {
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    @include mq(lg) {
+      padding-bottom: 100px;
+    }
+
+    .access-container {
+      padding: 0 0%;
+      width: 100%;
+
+      @include mq(lg) {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    }
+
+    #map {
+      width: 80vw;
+      max-width: 500px;
+      height: 300px;
+      margin: 50px auto 0;
+      border: 2px solid black;
+      border-radius: 10px;
+      filter: sepia(35%);
+
+      @include mq(lg) {
+        width: 60%;
+        max-width: 60%;
+        margin: 50px 0 0;
+      }
+
+      > iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .access-article {
+      width: 80vw;
+      max-width: 500px;
+      margin: 20px auto 0;
+
+      @include mq(lg) {
+        width: 40%;
+        max-width: 40%;
+        margin: auto 0;
+      }
+
+      .access-text {
+        font-family: "Noto Sans JP", serif;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        line-height: 26px;
+        color: $cText;
+
+        &:nth-child(even) {
+          margin-left: 16px;
+        }
+      }
+      
+      .a-t-uline {
+        margin-top: 30px;
+        border-bottom: 1px solid $cText;
+        display: inline-block;
+      }
+    }
+  }
+
+  #contact {
+    width: 100%;
+    height: auto;
+    padding-bottom: 100px;
+    padding-top: 50px;
+    background-color: $cBackGr;
+
+    .contact-article {
+      display: block;
+      width: 80vw;
+      max-width: 500px;
+      margin: 30px auto 0;
+
+
+      .contact-text {
+        text-align: center;
+        margin-top: 40px;
+        font-family: "Noto Sans JP", serif;
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 0.3px;
+        line-height: 30px;
+        color: $cText;
+      }
+
+      .holiday:last-child, :nth-last-child(2) {
+        margin-top: 8px;
+      }
+    }
+    
+    .recruit-btn {
+      font-family: "Noto Sans JP", serif;
+      font-weight: 400;
+      font-size: 22px;
+      letter-spacing: 0.3px;
+      line-height: 56px;
+      color: $cText;
+      width: 270px;
+      height: 60px;
+      display: block;
+      text-decoration: none;
+      margin: 80px auto 0;
+      text-align: center;
+      background-color: rgb(212 226 247);
+      display: block;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+}
+
+footer {
+  background-color: white;
+  width: 100vw;
+  height: 150px;
+  padding: 20px;
+  position: relative;
+
+  @include mq(lg) {
+    height: 300px;
+  }
+
+  &> a {
+    text-decoration: none;
+  }
+
+  .shop-name {
+    color: $cText;
+    font-family: "Cormorant Garamond", "Libre Caslon Display", "Playfair Display","EB Garamond", garamond, times, serif;
+    font-size: 20px;
+    letter-spacing: 3.76px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-left: 20px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    @include mq(lg) {
+      font-size: 36px;
+    }
+  }
+
+  .sns-icons {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 134px;
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(lg) {
+      width: 200px;
+      height: 40px;
+    }
+
+    > a > img{
+      transition-duration: 300ms;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.8);
+      }
+
+      @include mq(lg) {
+        transform: scale(1.6, 1.6);
+      }
+    }
+  }
+
+  .copy {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Noto Sans JP", serif;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 3.76px;
+    line-height: 20px;
+    color: $cText;
+
+    @include mq(lg) {
+      font-size: 20px;
+    }
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // モバイル用のスタイル
+// h1 {
+//   color: red;
+//   background: yellow;
+
+//   @include mq(sm) {
+//     color: blue;
+//   }
+
+//   @include mq(lg) {
+//     color: purple;
+//   }
+  
+//   @include mq(lg) {
+//     color: green;
+//   }
+  
+//   @include mq(xl) {
+//     color: orange;
+//   }
+// }
