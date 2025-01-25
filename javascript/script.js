@@ -8,8 +8,8 @@ const shopName = document.querySelector('.shop-name');
 const hamMenu = document.querySelector('#ham-menu');
 const body = document.body;
 
-const menuOpenTime = 240;
-const menuCloseTime = 240;
+const menuOpenTime = 600;
+const menuCloseTime = 600;
 
 const menuOptionsOpen = {
   duration: menuOpenTime,
@@ -96,8 +96,6 @@ navListItem.forEach((els) => {
     event.preventDefault();
     const targetId = els.getAttribute('href').substring(1);
     const targetEle = document.getElementById(targetId);
-    
-    smoothSc(targetEle, menuCloseTime);
 
     if(!els.classList.contains('menu-close')) {
       menuAnimation(menuOptionsClose);
@@ -105,7 +103,9 @@ navListItem.forEach((els) => {
       shopName.classList.toggle('menu-open');
       els.classList.add('menu-close');
 
-    smoothSc(targetEle, 0);
+      smoothSc(targetEle, menuCloseTime + 100);
+    } else {
+      smoothSc(targetEle, menuCloseTime / 2);
     }
   });
 });
