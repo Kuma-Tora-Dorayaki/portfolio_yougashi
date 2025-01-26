@@ -3,7 +3,7 @@
 
 $cText : #1E1C1C;
 $cBackGr : #FFF5EA;
-$cBackGr-2 : #c97a2a;
+$cBackGr-2 : #da8e42;
 $cTextGr : #808080;
 
 *, *::before, *::after {
@@ -24,6 +24,7 @@ header {
   height: 40px;
   width: 100%;
   position: sticky;
+  z-index: 10000;
   top: 0;
 
   .wrap {
@@ -46,10 +47,12 @@ header {
       top: 10px;
       transition-duration: 300ms;
 
-      &:hover {
-        cursor: pointer;
-        color: white;
-        transform: scale(1.1);
+      @include mq(lg) {
+        &:hover {
+          cursor: pointer;
+          color: white;
+          transform: scale(1.1);
+        }
       }
     }
     
@@ -563,12 +566,12 @@ main {
 footer {
   background-color: white;
   width: 100vw;
-  height: 150px;
+  height: 250px;
   padding: 20px;
   position: relative;
 
   @include mq(lg) {
-    height: 300px;
+    height: 400px;
   }
 
   &> a {

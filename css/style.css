@@ -11,10 +11,11 @@ body {
 }
 
 header {
-  background-color: #c97a2a;
+  background-color: #da8e42;
   height: 40px;
   width: 100%;
   position: sticky;
+  z-index: 10000;
   top: 0;
 }
 header .wrap {
@@ -38,10 +39,12 @@ header .wrap .shop-name {
   top: 10px;
   transition-duration: 300ms;
 }
-header .wrap .shop-name:hover {
-  cursor: pointer;
-  color: white;
-  transform: scale(1.1);
+@media (min-width: 960px) {
+  header .wrap .shop-name:hover {
+    cursor: pointer;
+    color: white;
+    transform: scale(1.1);
+  }
 }
 header .wrap .nav-list {
   opacity: 0;
@@ -214,7 +217,7 @@ main #menu .menu-item-container .menu-topic {
   line-height: 25px;
 }
 main #menu .menu-item-container .menu-recommendation .menu-topic {
-  color: #c97a2a;
+  color: #da8e42;
 }
 main #menu .menu-item-container .menu-seasonal .menu-topic {
   color: #1E1C1C;
@@ -514,13 +517,13 @@ main #contact .recruit-btn {
 footer {
   background-color: white;
   width: 100vw;
-  height: 150px;
+  height: 250px;
   padding: 20px;
   position: relative;
 }
 @media (min-width: 960px) {
   footer {
-    height: 300px;
+    height: 400px;
   }
 }
 footer > a {

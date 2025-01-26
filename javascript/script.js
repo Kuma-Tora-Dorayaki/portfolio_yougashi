@@ -7,6 +7,7 @@ const header = document.querySelector('header');
 const shopName = document.querySelector('.shop-name');
 const hamMenu = document.querySelector('#ham-menu');
 const body = document.body;
+const headerHeight = header.offsetHeight;
 
 const menuOpenTime = 600;
 const menuCloseTime = 600;
@@ -84,7 +85,7 @@ hamMenu.addEventListener('click', () => {
 const smoothSc = (targetEle, Scdelay) => {
   setTimeout(() => {
     window.scrollTo({
-      top: targetEle.offsetTop,
+      top: targetEle.offsetTop - headerHeight,
       behavior: 'smooth'
     });
   }, Scdelay);
