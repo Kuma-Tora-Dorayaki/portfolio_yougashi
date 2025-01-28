@@ -265,7 +265,11 @@ main {
       }
 
       #menu-img-3 {
-        object-position: top;
+        object-position: left -30px;
+
+        @include mq(lg) {
+        object-position: center;
+        }
       }
       
       .menu-text-box {
@@ -606,19 +610,23 @@ footer {
 
     @include mq(lg) {
       width: 200px;
-      height: 40px;
+      height: 30px;
     }
 
     > a > img{
       transition-duration: 300ms;
-
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.8);
-      }
+      width: 20px;
+      height: 20px;
+      margin: auto 0;
 
       @include mq(lg) {
-        transform: scale(1.6, 1.6);
+        width: 30px;
+        height: 30px;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.2);
+        }
       }
     }
   }
