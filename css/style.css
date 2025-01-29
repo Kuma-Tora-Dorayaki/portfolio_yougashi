@@ -569,15 +569,12 @@ footer .sns-icons {
 }
 footer .sns-icons > a > img {
   transition-duration: 300ms;
-  width: 20px;
-  height: 20px;
+  aspect-ratio: 1/1;
+  height: 100%;
+  width: auto;
   margin: auto 0;
 }
 @media (min-width: 960px) {
-  footer .sns-icons > a > img {
-    width: 30px;
-    height: 30px;
-  }
   footer .sns-icons > a > img:hover {
     cursor: pointer;
     transform: scale(1.2);

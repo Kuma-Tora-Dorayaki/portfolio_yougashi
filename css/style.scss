@@ -615,14 +615,12 @@ footer {
 
     > a > img{
       transition-duration: 300ms;
-      width: 20px;
-      height: 20px;
+      aspect-ratio: 1 / 1;
+      height: 100%;
+      width: auto;
       margin: auto 0;
 
       @include mq(lg) {
-        width: 30px;
-        height: 30px;
-
         &:hover {
           cursor: pointer;
           transform: scale(1.2);
@@ -649,46 +647,4 @@ footer {
       font-size: 20px;
     }
   }
-  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // モバイル用のスタイル
-// h1 {
-//   color: red;
-//   background: yellow;
-
-//   @include mq(sm) {
-//     color: blue;
-//   }
-
-//   @include mq(lg) {
-//     color: purple;
-//   }
-  
-//   @include mq(lg) {
-//     color: green;
-//   }
-  
-//   @include mq(xl) {
-//     color: orange;
-//   }
-// }
