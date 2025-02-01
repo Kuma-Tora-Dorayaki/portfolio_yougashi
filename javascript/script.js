@@ -9,8 +9,8 @@ const hamMenu = document.querySelector('#ham-menu');
 const body = document.body;
 const headerHeight = header.offsetHeight;
 
-const menuOpenTime = 600;
-const menuCloseTime = 600;
+const menuOpenTime = 480;
+const menuCloseTime = 480;
 
 const menuOptionsOpen = {
   duration: menuOpenTime,

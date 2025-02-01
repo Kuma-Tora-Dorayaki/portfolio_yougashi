@@ -6,6 +6,11 @@ $cBackGr : #FFF5EA;
 $cBackGr-2 : #da8e42;
 $cTextGr : #808080;
 
+:root {
+  --scrollbar: 0;
+}
+
+
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -22,7 +27,7 @@ body {
 header {
   background-color: $cBackGr-2;
   height: 40px;
-  width: 100%;
+  width: calc(100vw - var(--scrollbar));
   position: sticky;
   z-index: 10000;
   top: 0;
@@ -144,7 +149,7 @@ header {
 }
 
 main {
-  width: 100%;
+  width: calc(100vw - var(--scrollbar));
 
   .section-title ,.menu-topic {
     font-family: "Inter", sans-serif;
@@ -340,7 +345,7 @@ main {
     } 
 
     .about-item {
-      width: 100vw;
+      width: calc(100vw - var(--scrollbar));
       height: 410px;
       margin-top: 30px;
 
@@ -569,17 +574,13 @@ main {
 
 footer {
   background-color: white;
-  width: 100vw;
+  width: calc(100vw - var(--scrollbar));
   height: 250px;
   padding: 20px;
   position: relative;
 
   @include mq(lg) {
     height: 400px;
-  }
-
-  &> a {
-    text-decoration: none;
   }
 
   .shop-name {
@@ -589,20 +590,20 @@ footer {
     letter-spacing: 3.76px;
     font-weight: 400;
     line-height: 20px;
-    margin-left: 20px;
     position: absolute;
     top: 20px;
-    left: 0;
+    left: 20px;
 
     @include mq(lg) {
       font-size: 36px;
+      left: 40px;
     }
   }
 
   .sns-icons {
     position: absolute;
     top: 20px;
-    right: 40px;
+    right: 20px;
     width: 134px;
     height: 18px;
     display: flex;
@@ -611,6 +612,7 @@ footer {
     @include mq(lg) {
       width: 200px;
       height: 30px;
+      right: 40px;
     }
 
     > a > img{
